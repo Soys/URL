@@ -233,7 +233,7 @@
       <span class="subtitle">{{ page.description }}</span>
     {% endif %}
     <hr />
-      <p><a href="{{ page.link }}" target="blank">新标签页打开</a> | <a href="{{ page.link }}" target="parent">当前页面打开</a><embed src="{{ page.link }}" width="750" height="420" /></p>
+      <p><a href="{{ page.link }}" target="blank">新标签页打开</a> | <a href="{{ page.link }}" target="_parent">当前页面打开</a><embed src="{{ page.link }}" width="750" height="420" /></p>
       {% unless page.path == "index.md" or page.url == "./"  %}
         <a class="btn" href="{{ site.baseurl }}/">回首页</a>
       {% endunless %}
