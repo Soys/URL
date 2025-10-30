@@ -13,9 +13,9 @@
 
    ```yaml
    ---
-   layout: redirect
-   title: "演示文档"
-   description: "这是一篇演示文档"
+   layout: redirect/embed #redirect为跳转/embed为嵌入
+   title: "演示文档" #在embed中担任着主标题的作用
+   description: "这是一篇演示文档" #在embed中担任子标题的作用
    pic: "/images/your-image.jpg"
    # 或
    pic: "https://example.com/images/your-image.jpg"
@@ -36,7 +36,8 @@
    - 如不需要请注释掉对应行，目前`pic`和`background`以及`redirect_time`不影响运行。(大概)【其中如`redirect_time`未填则默认为0】
   
    一键复制模板：
-
+   
+   跳转模板：
    ```yaml
    ---
    layout: redirect
@@ -47,14 +48,24 @@
    redirect_to: "https://example.com/"
    redirect_time: 3
    ---
-
    ```
+   嵌入模板：
+   ```yaml
+   ---
+   layout: embed
+   title: "主标题"
+   description: "子标题"
+   pic: "https://example.com/images/withname.png" #Open Graph图片
+   background: "/images/0.png" #视频或图片
+   link: "https://ak-webview.hypergryph.com/" #嵌入网页
+   ---
+   ```
+   
+4. 如果你想使用自定义图片，请将图片上传到 `images` 文件夹。
 
-3. 如果你想使用自定义图片，请将图片上传到 `images` 文件夹。
+5. 提交变更并推送到 GitHub 存储库。
 
-4. 提交变更并推送到 GitHub 存储库。
-
-5. GitHub Actions 会自动创建并部署你新的短链接。
+6. GitHub Actions 会自动创建并部署你新的短链接。
 
 ## 技术原理
 
